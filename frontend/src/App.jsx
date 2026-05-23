@@ -57,7 +57,7 @@ function getGrade(marks) {
   if (marks >= 70) return { grade: "B", label: "Very Good", color: "#34d399" };
   if (marks >= 60) return { grade: "C", label: "Good", color: "#fbbf24" };
   if (marks >= 50) return { grade: "D", label: "Average", color: "#f97316" };
-  return { grade: "F", label: "Needs Improvement", color: "#f87171" };
+  return { grade: "F", label: "Needs Work", color: "#f87171" };
 }
 
 function getConfidence(marks) {

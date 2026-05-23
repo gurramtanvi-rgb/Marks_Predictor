@@ -24,9 +24,25 @@ def predict():
 
     prediction = model.predict(features)[0]
 
+    study = float(data["study_hours"])
+    attendance = float(data["attendance"])
+    previous = float(data["previous_marks"])
+    assignments = float(data["assignments"])
+    mock = float(data["mock_test"])
+
+    average_academic = (
+        study * 10 +
+        attendance +
+        previous +
+        assignments +
+        mock
+    ) / 5
+
+    if average_academic < 40:
+        prediction = min(prediction, 45)
+
     return jsonify({
         "predicted_marks": round(float(prediction), 2)
     })
-
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
