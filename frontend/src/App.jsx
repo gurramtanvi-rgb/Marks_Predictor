@@ -598,7 +598,7 @@ Powered by AI Marks Predictor
       </main>
 
       <footer className="footer">
-        <p>Built with <span className="footer-accent">Machine Learning</span> · AI Marks Predictor</p>
+        <p> © 2026 <span className="footer-accent">Tanvi Gurram</span> · Marks Predictor</p>
       </footer>
 
       {showScrollTop && (
